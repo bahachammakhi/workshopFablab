@@ -18,7 +18,7 @@ const HomeContainer = () => {
 
   const [task, setTask] = useState("");
 
-  console.log(tasks);
+  console.log(task);
   function handleDelete(index) {
     const newArray = [...tasks];
     newArray.splice(index, 1);
@@ -33,11 +33,11 @@ const HomeContainer = () => {
     newTasks[index] = task;
     setTasks(newTasks);
   }
-  function handleEdit(value, keyTochange) {
-    const newEditElement = { ...editElement };
-    newEditElement.element[keyTochange] = value;
-    setEditElement(newEditElement);
-  }
+  // function handleEdit(value, keyTochange) {
+  //   const newEditElement = { ...editElement };
+  //   newEditElement.element[keyTochange] = value;
+  //   setEditElement(newEditElement);
+  // }
   return (
     <div className="App">
       <Button onClick={() => setVisible(true)}>Add</Button>
